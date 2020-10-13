@@ -1,0 +1,14 @@
+echo "---------------START------------------"
+docker -v
+docker login --username=admin --password=ZNZLkj2020 39.105.3.210:5000/library
+docker pull 39.105.3.210:5000/library/ck-monitor:latest
+docker rm -f ck-monitor|true
+docker run -d \
+--name ck-monitor \
+--hostname=ck-monitor \
+--restart=always \
+-v /usr/local/ck-monitor:/ck-monitor/logs \
+-e JAVA_OPTS='-Dspring.profiles.active=test -Dspring.cloud.nacos.discovery.ip=172.17.130.106 -Dspring.cloud.nacos.discovery.port=8765 -Dspring.cloud.nacos.discovery.server-addr=http://172.17.130.106' \
+-p 8765:8765 \
+39.105.3.210:5000/library/ck-monitor:latest
+echo "---------------END------------------"

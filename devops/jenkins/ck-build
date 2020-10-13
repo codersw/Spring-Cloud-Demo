@@ -1,0 +1,49 @@
+BUILD_ID=DONTKILLME
+echo "---------------Clear-Images...------------------"
+docker -v
+clearImagesList=$(docker images | grep "5000/library" | awk '{print $3}')
+if [ ! -n "$clearImagesList" ]; then
+echo "no images need  clean up."
+else
+docker rmi "$clearImagesList"|true
+echo "clear success."
+fi
+cd ${WORKSPACE}/ck-server
+mvn docker:build docker:push
+echo "ck-server push success"
+cd ${WORKSPACE}/ck-gateway
+mvn docker:build docker:push
+echo "ck-gateway push success"
+cd ${WORKSPACE}/ck-monitor
+mvn docker:build docker:push
+echo "ck-monitor push success"
+cd ${WORKSPACE}/ck-sentinel
+mvn docker:build docker:push
+echo "ck-sentinel push success"
+cd ${WORKSPACE}/ck-job
+mvn docker:build docker:push
+echo "ck-job push success"
+cd ${WORKSPACE}/ck-manager
+node -v
+npm -v
+cnpm -v
+cnpm install -d
+cnpm install -g
+cnpm run build
+docker login --username=admin --password=ZNZLkj2020 39.105.3.210:5000/library
+docker build -t 39.105.3.210:5000/library/ck-manager:latest .
+docker push 39.105.3.210:5000/library/ck-manager:latest
+echo "ck-manager push success"
+rm -rf dist
+cd ${WORKSPACE}/ck-app
+cnpm install -d
+cnpm install -g
+cnpm run build
+docker build -t 39.105.3.210:5000/library/ck-app:latest .
+docker push 39.105.3.210:5000/library/ck-app:latest
+echo "ck-app push success"
+cd ${WORKSPACE}/ck-web
+docker build -t 39.105.3.210:5000/library/ck-web:latest .
+docker push 39.105.3.210:5000/library/ck-web:latest
+echo "ck-web push success"
+rm -rf dist

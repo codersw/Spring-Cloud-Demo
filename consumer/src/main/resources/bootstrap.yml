@@ -1,0 +1,25 @@
+server:
+  port: 8070
+spring:
+  application:
+    name: @artifactId@
+  cloud:
+    nacos:
+      discovery:
+        server-addr: @config.uri@
+      config:
+        server-addr: ${spring.cloud.nacos.discovery.server-addr}
+        file-extension: yml
+        shared-configs:
+          - application-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
+          - @artifactId@-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
+  profiles:
+    active: @profiles.active@
+ribbon:
+  ConnectTimeout: 50000
+  ReadTimeout: 50000
+feign:
+  hystrix:
+    enabled: true
+  httpclient:
+    enabled: true

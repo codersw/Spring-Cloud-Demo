@@ -1,0 +1,13 @@
+version: '3'
+services:
+  redis:
+    restart: always
+    container_name: redis
+    hostname: redis
+    image: redis:5.0.5
+    ports:
+      - 6379:6379
+    volumes:
+      - /usr/local/redis/conf:/usr/local/etc/redis
+      - /usr/local/redis/data:/data
+    command: redis-server --requirepass ZNZLkj2020

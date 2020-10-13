@@ -1,0 +1,21 @@
+version: "3"
+services:
+  mysql:
+    image: "mysql:5.7.27"
+    ports:
+      - "3306:3306"
+    volumes:
+      - "./mysql/data:/var/lib/mysql"
+      - "./mysql/conf.d:/etc/mysql/conf.d"
+    environment:
+      - "MYSQL_ROOT_PASSWORD=123456"
+      - "MYSQL_DATABASE=test"
+      - "MYSQL_ROOT_HOST=%"
+    command: [
+      "mysqld",
+      "--innodb-buffer-pool-size=20M",
+      "--character-set-server=utf8",
+      "--collation-server=utf8_general_ci",
+      "--default-time-zone=+8:00",
+      "--lower-case-table-names=1"
+    ]

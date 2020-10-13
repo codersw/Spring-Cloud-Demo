@@ -1,0 +1,15 @@
+version: '3'
+services:
+  tomcat:
+    restart: always
+    container_name: tomcat
+    hostname: tomcat
+    image: tomcat
+    ports:
+      - 8080:8080
+    volumes:
+      - /usr/local/tomcat/webapps:/usr/local/tomcat/webapps/
+      - /usr/local/tomcat/conf/server.xml:/usr/local/tomcat/conf/server.xml
+      - /usr/local/tomcat/logs:/usr/local/tomcat/logs/
+    environment:
+      TZ: Asia/Shanghai

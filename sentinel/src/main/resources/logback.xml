@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="false">
+    <!--日志存放跟目录-->
+    <property name="LOG_HOME" value="."/>
+    <!-- 日志文件最大的保存历史数量-->
+    <property name="LOG_MAX" value="30MB"/>
+    <!--日志文件保留天数-->
+    <property name="LOG_DAY" value="30"/>
+    <!--格式化输出：%d表示日期，%thread表示线程名，%-5level：级别从左显示5个字符宽度%msg：日志消息，%n是换行符-->
+    <property name="LOG_PATTERN" value="%d{yyyy-MM-dd HH:mm:ss} [%thread] %5level %logger{50} - %msg%n"/>
+    <!-- 日志级别 trace<debug<info<warn<error若定义的日志级别为info，则不会打印出 trace和debug的相关日志。 -->
+    <property name="LOG_LEVEL" value="DEBUG"/><!--输出到控制台颜色-->
+    <property name="LOG_COLOR" value="%magenta(%d{yyyy-MM-dd HH:mm:ss}) %highlight(%-5level) %yellow(%thread) %green(%logger) %msg%n"/>
+    <!-- 控制台输出 -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>${LOG_PATTERN}</pattern>
+            <!--<pattern>${LOG_COLOR}</pattern>-->
+        </encoder>
+    </appender>
+
+    <!-- 按照每天生成日志文件 -->
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!-- 当前的日志文件存放路径 -->
+        <file>${LOG_HOME}/logs/sentinel.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!--日志文件输出的文件名-->
+            <fileNamePattern>${LOG_HOME}/logs/sentinel.%d{yyyy-MM-dd}.%i.log.gz</fileNamePattern>
+            <!-- 保留天数 -->
+            <MaxHistory>${LOG_DAY}</MaxHistory>
+            <!--日志文件最大的大小-->
+            <TimeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <MaxFileSize>${LOG_MAX}</MaxFileSize>
+            </TimeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>${LOG_PATTERN}</pattern>
+        </encoder>
+    </appender>
+
+    <!-- 日志级别 trace<debug<info<warn<error若定义的日志级别为info，则不会打印出 trace和debug的相关日志。 -->
+    <root level="info">
+        <appender-ref ref="STDOUT" />
+        <appender-ref ref="FILE" />
+    </root>
+</configuration>

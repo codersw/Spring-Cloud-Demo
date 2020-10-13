@@ -1,0 +1,18 @@
+echo "---------------START------------------"
+docker -v
+docker login --username=admin --password=ZNZLkj2020 39.105.3.210:5000/library
+docker pull 39.105.3.210:5000/library/ck-job:latest
+docker rm -f ck-job|true
+docker run -d \
+--name ck-job \
+--hostname=ck-job \
+--restart=always \
+-v /usr/local/ck-job:/ck-job/logs \
+-e JAVA_OPTS='
+-Dspring.profiles.active=test
+-Dspring.cloud.nacos.discovery.ip=172.17.130.106
+-Dspring.cloud.nacos.discovery.port=8070
+-Dspring.cloud.nacos.discovery.server-addr=http://172.17.130.106' \
+-p 8070:8070 \
+39.105.3.210:5000/library/ck-job:latest
+echo "---------------END------------------"

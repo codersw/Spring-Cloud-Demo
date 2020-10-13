@@ -1,0 +1,102 @@
+/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/bin/java  -Xms512m -Xmx512m -Xmn256m -Dnacos.standalone=true -Djava.ext.dirs=/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib/ext:/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/lib/ext:/Users/jennifer/Documents/mall/cloud-platform/ace-control/ace-nacos/nacos/plugins/cmdb -Xloggc:/Users/jennifer/Documents/mall/cloud-platform/ace-control/ace-nacos/nacos/logs/nacos_gc.log -verbose:gc -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+PrintGCTimeStamps -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=10 -XX:GCLogFileSize=100M -Dnacos.home=/Users/jennifer/Documents/mall/cloud-platform/ace-control/ace-nacos/nacos -jar /Users/jennifer/Documents/mall/cloud-platform/ace-control/ace-nacos/nacos/target/nacos-server.jar  --spring.config.location=classpath:/,classpath:/config/,file:./,file:./config/,file:/Users/jennifer/Documents/mall/cloud-platform/ace-control/ace-nacos/nacos/conf/ --logging.config=/Users/jennifer/Documents/mall/cloud-platform/ace-control/ace-nacos/nacos/conf/nacos-logback.xml
+nacos is starting
+Error: Unable to access jarfile /Users/jennifer/Documents/mall/cloud-platform/ace-control/ace-nacos/nacos/target/nacos-server.jar
+/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/bin/java  -Xms512m -Xmx512m -Xmn256m -Dnacos.standalone=true -Djava.ext.dirs=/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib/ext:/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/lib/ext:/Users/jennifer/Documents/mall/cloud-platform/ace-control/ace-nacos/nacos/plugins/cmdb -Xloggc:/Users/jennifer/Documents/mall/cloud-platform/ace-control/ace-nacos/nacos/logs/nacos_gc.log -verbose:gc -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+PrintGCTimeStamps -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=10 -XX:GCLogFileSize=100M -Dnacos.home=/Users/jennifer/Documents/mall/cloud-platform/ace-control/ace-nacos/nacos -jar /Users/jennifer/Documents/mall/cloud-platform/ace-control/ace-nacos/nacos/target/nacos-server.jar  --spring.config.location=classpath:/,classpath:/config/,file:./,file:./config/,file:/Users/jennifer/Documents/mall/cloud-platform/ace-control/ace-nacos/nacos/conf/ --logging.config=/Users/jennifer/Documents/mall/cloud-platform/ace-control/ace-nacos/nacos/conf/nacos-logback.xml
+nacos is starting
+Error: Unable to access jarfile /Users/jennifer/Documents/mall/cloud-platform/ace-control/ace-nacos/nacos/target/nacos-server.jar
+/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/bin/java  -Xms512m -Xmx512m -Xmn256m -Dnacos.standalone=true -Djava.ext.dirs=/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib/ext:/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/lib/ext:/Users/jennifer/Documents/mall/cloud-platform/ace-control/ace-nacos/nacos/plugins/cmdb -Xloggc:/Users/jennifer/Documents/mall/cloud-platform/ace-control/ace-nacos/nacos/logs/nacos_gc.log -verbose:gc -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+PrintGCTimeStamps -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=10 -XX:GCLogFileSize=100M -Dnacos.home=/Users/jennifer/Documents/mall/cloud-platform/ace-control/ace-nacos/nacos -jar /Users/jennifer/Documents/mall/cloud-platform/ace-control/ace-nacos/nacos/target/nacos-server.jar  --spring.config.location=classpath:/,classpath:/config/,file:./,file:./config/,file:/Users/jennifer/Documents/mall/cloud-platform/ace-control/ace-nacos/nacos/conf/ --logging.config=/Users/jennifer/Documents/mall/cloud-platform/ace-control/ace-nacos/nacos/conf/nacos-logback.xml
+nacos is starting
+Error: Unable to access jarfile /Users/jennifer/Documents/mall/cloud-platform/ace-control/ace-nacos/nacos/target/nacos-server.jar
+/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/bin/java  -Xms512m -Xmx512m -Xmn256m -Dnacos.standalone=true -Djava.ext.dirs=/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib/ext:/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/lib/ext:/Users/jennifer/Documents/mall/cloud-platform/ace-control/ace-nacos/nacos/plugins/cmdb -Xloggc:/Users/jennifer/Documents/mall/cloud-platform/ace-control/ace-nacos/nacos/logs/nacos_gc.log -verbose:gc -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+PrintGCTimeStamps -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=10 -XX:GCLogFileSize=100M -Dnacos.home=/Users/jennifer/Documents/mall/cloud-platform/ace-control/ace-nacos/nacos -jar /Users/jennifer/Documents/mall/cloud-platform/ace-control/ace-nacos/nacos/target/nacos-server.jar  --spring.config.location=classpath:/,classpath:/config/,file:./,file:./config/,file:/Users/jennifer/Documents/mall/cloud-platform/ace-control/ace-nacos/nacos/conf/ --logging.config=/Users/jennifer/Documents/mall/cloud-platform/ace-control/ace-nacos/nacos/conf/nacos-logback.xml
+nacos is starting
+
+         ,--.
+       ,--.'|
+   ,--,:  : |                                           Nacos 0.8.0
+,`--.'`|  ' :                       ,---.               Running in stand alone mode
+|   :  :  | |                      '   ,'\   .--.--.    Port: 8848
+:   |   \ | :  ,--.--.     ,---.  /   /   | /  /    '   Pid: 48408
+|   : '  '; | /       \   /     \.   ; ,. :|  :  /`./   Console: http://192.168.2.239:8848/nacos/index.html
+'   ' ;.    ;.--.  .-. | /    / ''   | |: :|  :  ;_
+|   | | \   | \__\/: . ..    ' / '   | .; : \  \    `.      https://nacos.io
+'   : |  ; .' ," .--.; |'   ; :__|   :    |  `----.   \
+|   | '`--'  /  /  ,.  |'   | '.'|\   \  /  /  /`--'  /
+'   : |     ;  :   .'   \   :    : `----'  '--'.     /
+;   |.'     |  ,     .-./\   \  /            `--'---'
+'---'        `--`---'     `----'
+
+2019-12-03 16:47:30,748 INFO Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$c86f83bf] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+
+2019-12-03 16:47:30,928 INFO Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+
+2019-12-03 16:47:30,932 INFO Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@221a3fa4' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+
+2019-12-03 16:47:30,937 INFO Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$ed442671] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+
+2019-12-03 16:47:30,944 INFO Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+
+2019-12-03 16:47:31,911 INFO Tomcat initialized with port(s): 8848 (http)
+
+2019-12-03 16:47:32,193 INFO Root WebApplicationContext: initialization completed in 4870 ms
+
+2019-12-03 16:47:36,336 INFO Autowired annotation is not supported on static fields: static org.springframework.context.ApplicationContext com.alibaba.nacos.naming.boot.SpringContext.context
+
+2019-12-03 16:47:36,894 INFO Initializing ExecutorService 'applicationTaskExecutor'
+
+2019-12-03 16:47:37,198 INFO Adding welcome page: class path resource [static/index.html]
+
+2019-12-03 16:47:38,123 INFO Creating filter chain: Ant [pattern='/'], []
+
+2019-12-03 16:47:38,124 INFO Creating filter chain: Ant [pattern='/**/*.css'], []
+
+2019-12-03 16:47:38,124 INFO Creating filter chain: Ant [pattern='/**/*.js'], []
+
+2019-12-03 16:47:38,124 INFO Creating filter chain: Ant [pattern='/**/*.html'], []
+
+2019-12-03 16:47:38,124 INFO Creating filter chain: Ant [pattern='/**/*.map'], []
+
+2019-12-03 16:47:38,124 INFO Creating filter chain: Ant [pattern='/**/*.svg'], []
+
+2019-12-03 16:47:38,124 INFO Creating filter chain: Ant [pattern='/**/*.png'], []
+
+2019-12-03 16:47:38,124 INFO Creating filter chain: Ant [pattern='/**/*.ico'], []
+
+2019-12-03 16:47:38,124 INFO Creating filter chain: Ant [pattern='/console-fe/public/**'], []
+
+2019-12-03 16:47:38,124 INFO Creating filter chain: Ant [pattern='/v1/auth/login'], []
+
+2019-12-03 16:47:38,124 INFO Creating filter chain: Ant [pattern='/v1/console/health'], []
+
+2019-12-03 16:47:38,124 INFO Creating filter chain: Ant [pattern='/v1/cs/**'], []
+
+2019-12-03 16:47:38,124 INFO Creating filter chain: Ant [pattern='/v1/ns/**'], []
+
+2019-12-03 16:47:38,125 INFO Creating filter chain: Ant [pattern='/v1/cmdb/**'], []
+
+2019-12-03 16:47:38,125 INFO Creating filter chain: Ant [pattern='/actuator/**'], []
+
+2019-12-03 16:47:38,179 INFO Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4b672daa, org.springframework.security.web.context.SecurityContextPersistenceFilter@24b6b8f6, org.springframework.security.web.header.HeaderWriterFilter@5af3a0f, org.springframework.security.web.authentication.logout.LogoutFilter@14b030a0, com.alibaba.nacos.console.filter.JwtAuthenticationTokenFilter@ea9b7c6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2bb7bd00, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@45c8d09f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@e077866, org.springframework.security.web.session.SessionManagementFilter@10993713, org.springframework.security.web.access.ExceptionTranslationFilter@758c83d8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@726e5805]
+
+2019-12-03 16:47:38,241 INFO Exposing 2 endpoint(s) beneath base path '/actuator'
+
+2019-12-03 16:47:38,292 INFO Initializing ExecutorService 'taskScheduler'
+
+2019-12-03 16:47:38,456 INFO Tomcat started on port(s): 8848 (http) with context path '/nacos'
+
+2019-12-03 16:47:38,628 INFO Initializing Servlet 'dispatcherServlet'
+
+2019-12-03 16:47:38,647 INFO Completed initialization in 19 ms
+
+0
+2019-12-03 16:47:39,544 INFO Nacos Log files: /Users/jennifer/Documents/mall/cloud-platform/ace-control/ace-nacos/nacos/logs/
+
+2019-12-03 16:47:39,544 INFO Nacos Conf files: /Users/jennifer/Documents/mall/cloud-platform/ace-control/ace-nacos/nacos/conf/
+
+2019-12-03 16:47:39,544 INFO Nacos Data files: /Users/jennifer/Documents/mall/cloud-platform/ace-control/ace-nacos/nacos/data/
+
+2019-12-03 16:47:39,544 INFO Nacos started successfully in stand alone mode.
+
+2019-12-03 16:47:39,565 INFO Shutting down ExecutorService 'taskScheduler'
+
+2019-12-03 16:47:39,569 INFO Shutting down ExecutorService 'applicationTaskExecutor'
+

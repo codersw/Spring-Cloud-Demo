@@ -1,0 +1,21 @@
+version: '3'
+services:
+  jenkins:
+    container_name: jenkins
+    image: 'jenkinszh/jenkins-zh:latest'
+    restart: always
+    user: root
+    environment:
+      - TZ=Asia/Shanghai
+      - JENKINS_ARGS=--prefix=/jenkins
+      - JENKINS_OPTS=--prefix=/jenkins
+    ports:
+      - '8080:8080'
+      - '50000:50000'
+    volumes:
+      - /root/jenkins:/var/jenkins_home
+      - /usr/local/maven:/usr/local/maven
+      - /usr/local/nodejs:/usr/local/nodejs
+      - /usr/bin/docker:/usr/bin/docker
+      - /var/run/docker.sock:/var/run/docker.sock
+    network_mode: "bridge"

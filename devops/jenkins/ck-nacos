@@ -1,0 +1,30 @@
+echo "---------------START------------------"
+docker -v
+docker pull nacos/nacos-server:latest
+docker rm -f nacos-1
+docker run -d \
+--name nacos-1 \
+--hostname=nacos-1 \
+--restart=always \
+-v /usr/local/nacos-1:/home/nacos/logs \
+-e PREFER_HOST_MODE=hostname \
+-e MODE=cluster \
+-e NACOS_APPLICATION_PORT=8848 \
+-e NACOS_SERVERS="172.17.130.106:8848  172.17.130.105:8848 172.17.130.107:8848" \
+-e SPRING_DATASOURCE_PLATFORM=mysql \
+-e MYSQL_SERVICE_HOST=101.201.38.43 \
+-e MYSQL_SERVICE_PORT=3306 \
+-e MYSQL_SERVICE_USER=root \
+-e MYSQL_SERVICE_PASSWORD=root57 \
+-e MYSQL_SERVICE_DB_NAME=nacos \
+-e NACOS_SERVER_IP=172.17.130.105 \
+-e SPRING_DATASOURCE_PLATFORM=mysql \
+-e MYSQL_DATABASE_NUM=1 \
+-e JVM_XMS=512m \
+-e JVM_XMX=512m \
+-e JVM_XMN=256m \
+-e JVM_MS=32m \
+-e JVM_MMS=80m \
+-p 8848:8848 \
+nacos/nacos-server:latest
+echo "---------------END------------------"
