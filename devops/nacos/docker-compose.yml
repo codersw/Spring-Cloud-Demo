@@ -1,0 +1,23 @@
+version: "3"
+services:
+  nacos:
+    hostname: nacos
+    image: nacos/nacos-server:latest
+    container_name: nacos1
+    environment:
+      - NACOS_SERVERS=
+      - PREFER_HOST_MODE=hostname
+      - NACOS_SERVER_IP=124.70.71.218
+      - SPRING_DATASOURCE_PLATFORM=
+      - MYSQL_MASTER_SERVICE_HOST=
+      - MYSQL_MASTER_SERVICE_PORT=
+      - MYSQL_MASTER_SERVICE_DB_NAME=nacos_config
+      - MYSQL_MASTER_SERVICE_USER=
+      - MYSQL_MASTER_SERVICE_PASSWORD=
+      - MYSQL_DATABASE_NUM=1
+    volumes:
+      - /home/nacos1/logs:/home/nacos/logs
+    ports:
+      - "8848:8848"
+      - "9555:9555"
+    restart: on-failure
